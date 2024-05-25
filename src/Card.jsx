@@ -30,13 +30,13 @@ const cardDetails = [
 
 function Card() {
   const cardList = cardDetails.map(cardDetail => 
-    <div key={cardDetail.id}>
+    <div key={cardDetail.id} className={`card card${cardDetail.id}`}>
       <h2>{cardDetail.heading}</h2>
       <p>{cardDetail.text}</p>
       <img src={cardDetail.imgUrl} alt="" />
     </div>
     )
-  return <section>{cardList}</section>
+  return <section className="card-wrapper">{cardList}</section>
 }
 
 export default Card
